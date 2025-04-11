@@ -56,21 +56,21 @@ Built specifically for:
 ## How to Run
 
 1. **Clone repo**  
-   ``bash
+   ```bash
    git clone https://github.com/yourusername/gen-doc-formation.git
    cd gen-doc-formation
-   ``
+   ```
 2. **Backend Setup**
 
     - Copy .env.example → .env and configure DB
 
     - Install dependencies
 
-    ``bash
+    ```bash
     composer install
     php artisan migrate --seed
     php artisan serve
-    ``
+    ```
 
 3. **Frontend Setup**
 
