@@ -74,11 +74,11 @@ Built specifically for:
 
 3. **Frontend Setup**
 
-    ``bash
+    ```bash
     cd client
     npm install
     npm run dev
-    ``
+    ```
 
 
 ## Future Improvements
