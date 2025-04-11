@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('url');
             $table->boolean('verified')->default(false);
-            $table->foreignId('stagiaire_id')->constrained('stagiaires')->onDelete('cascade');
-            $table->foreignId('formation_id')->constrained('formations')->onDelete('cascade');
+            $table->foreignId('id')->constrained('stagiaires')->onDelete('cascade');
+            $table->foreignId('id')->constrained('formations')->onDelete('cascade');
             $table->timestamps();
         });
     }

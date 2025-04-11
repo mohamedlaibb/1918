@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('evaluations', function (Blueprint $table) {
             $table->id();
             $table->json('réponses_json');
-            $table->foreignId('stagiaire_id')->constrained('stagiaires')->onDelete('cascade');
-            $table->foreignId('formation_id')->constrained('formations')->onDelete('cascade');
+            $table->foreignId('id')->constrained('stagiaires')->onDelete('cascade');
+            $table->foreignId('id')->constrained('formations')->onDelete('cascade');
             $table->timestamps();
 
         });

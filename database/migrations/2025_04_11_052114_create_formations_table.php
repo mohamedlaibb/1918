@@ -18,13 +18,11 @@ return new class extends Migration
             $table->string('nom_formateur'); // Trainer's full name
             $table->integer('duree'); // Duration in hours
             $table->date('date_debut'); // Start date (YYYY-MM-DD)
-            $table->date('date_fin'); // End date (YYYY-MM-DD)
-            $table->foreign('client_id')->references('client_id')->on('clients');
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps(); // Automatic created_at and updated_at
 
-            // Optional: Add index for better performance
-            $table->index(['client_id', 'date_debut']);
+
         });
     }
     /**

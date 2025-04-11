@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type'); // Fiche présence, certificat, etc.
             $table->string('url');
-            $table->foreignId('formation_id')->constrained('formations')->onDelete('cascade');
+            $table->foreignId('id')->constrained('formations')->onDelete('cascade');
             $table->timestamps();
 
         });
