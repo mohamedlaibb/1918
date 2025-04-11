@@ -19,7 +19,8 @@ return new class extends Migration
             $table->integer('duree'); // Duration in hours
             $table->date('date_debut'); // Start date (YYYY-MM-DD)
             $table->date('date_fin'); // End date (YYYY-MM-DD)
-            $table->foreignId('client_id')->constrained()->onDelete('cascade'); // Links to clients table
+            $table->foreign('client_id')->references('client_id')->on('clients');
+
             $table->timestamps(); // Automatic created_at and updated_at
 
             // Optional: Add index for better performance
